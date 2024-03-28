@@ -1,0 +1,26 @@
+{
+  "name": "web-crawler-v3",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "csv-parse": "^5.5.5",
+    "csv-parser": "^3.0.0",
+    "mongodb": "^6.5.0",
+    "mongoose": "^8.2.3",
+    "node-geocoder": "^4.3.0",
+    "parse-address": "^1.1.2",
+    "pino": "^8.19.0",
+    "puppeteer": "^22.6.1",
+    "puppeteer-cluster": "^0.24.0",
+    "winston": "^3.13.0"
+  },
+  "devDependencies": {
+    "pino-pretty": "^11.0.0"
+  }
+}
