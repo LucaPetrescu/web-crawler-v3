@@ -1,19 +1,22 @@
 const { Cluster } = require("puppeteer-cluster");
 
-(async () => {
+const { crawl, data } = require("../index");
+
+async function parallelCrawl() {
   const cluster = await Cluster.launch({
     concurrency: Cluster.CONCURRENCY_PAGE,
-    maxConcurrency: 10,
+    maxConcurrency: 20,
   });
 
   await cluster.task(async ({ page, data: url }) => {
-    await page.goto(url);
+    await crawl(url, page);
   });
 
-  cluster.queue("http://www.google.com/");
-  cluster.queue("http://www.wikipedia.org/");
-  // many more pages
-
+  for (let i = 0; i < data.length; i++) {
+    cluster.queue(data[i]);
+  }
   await cluster.idle();
   await cluster.close();
-})();
+}
+
+parallelCrawl();

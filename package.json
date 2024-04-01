@@ -4,11 +4,13 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "pm2 start ./rabbitmq/consumeUrl.js -i 10"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "amqplib": "^0.10.3",
     "csv-parse": "^5.5.5",
     "csv-parser": "^3.0.0",
     "mongodb": "^6.5.0",
@@ -18,6 +20,7 @@
     "pino": "^8.19.0",
     "puppeteer": "^22.6.1",
     "puppeteer-cluster": "^0.24.0",
+    "redis": "^4.6.13",
     "winston": "^3.13.0"
   },
   "devDependencies": {

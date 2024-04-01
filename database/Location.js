@@ -2,12 +2,13 @@ const mongoose = require("mongoose");
 
 const LocationSchema = new mongoose.Schema(
   {
+    websiteName: String,
     latitude: Number,
     longitude: Number,
     country: String,
     countryCode: String,
     city: String,
-    zipcode: Number,
+    zipcode: String,
     streetName: String,
     streetNumber: Number,
   },

@@ -2,7 +2,7 @@ const NodeGeocoder = require("node-geocoder");
 
 const options = {
   provider: "opencage",
-  apiKey: "13f8483faea84c3ab96dced0014f3625",
+  apiKey: "--your-API-key--",
   formatter: null,
 };
 
