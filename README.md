@@ -3,7 +3,7 @@
 The project is available at: https://github.com/LucaPetrescu/web-crawler-v3.
 Setting up the project
 Assuming that prior software tools (Node.js and Git) are installed on yout system, for setting up the project, the GitHub repository will need to be cloned on the local machine. 
-git clone https://github.com/LucaPetrescu/web-crawler-v3.git
+```git clone https://github.com/LucaPetrescu/web-crawler-v3.git```
 After that, you will need to install the dependencies:
 npm install
 Before running the app, the application also has a Redis server configured for caching. So first of all, you will need to setup Redis on your machine. Check the Redis docs here. For a better visualization of your Redis database, you can also install RedisInsight, a graphical UI for visualizing all the Redis databases.
