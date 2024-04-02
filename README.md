@@ -27,8 +27,7 @@ To start the RabbitMQ server, you will need to navigate to the sbin directory of
 ````
 rabbitmq-plugins enable rabbitmq_management
 ````
-	The RabbitMQ server is now available at http://localhost:15672/ with credentials guest:guest.
-	To this point, the project is setted up. Now, to run the crawler, you will need to run the script with node cluster.js by changing the directory to /cluster. However, this will run the crawler with Puppeteer Cluster.
+The RabbitMQ server is now available at http://localhost:15672/ with credentials guest:guest. To this point, the project is setted up. Now, to run the crawler, you will need to run the script with node cluster.js by changing the directory to /cluster. However, this will run the crawler with Puppeteer Cluster.
 	To run the project with RabbitMQ, first you will need to switch to /rabbitmq directory and first run the publishUrl.js and then run pm2 start ./rabbitmq/consumeUrl.js -i 10. However, this is not recommended because this variant is not optimized and memory shortages will arise.
 Design and Implementation
 	For having a bigger picture of the design, I have used Chapter 9: Design a Web Crawler in System Design Interview: An Insider’s Guide book by Alex Wu. There, the author goes in detail on how a crawler should be designed. However, the author assumes that the reader has the tools, knowledge and infrastructure to design a highly scalable and efficient crawler. Personally, I did not have all of these things, so I only took the parts that were „doable”. Here are those things:
