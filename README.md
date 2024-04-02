@@ -1,4 +1,4 @@
-Abstract
+<h1>Abstract</h1>
 	The project described in this document is a parallel web crawler capable of scrapping multiple URLs at once. Technologies used in this project are Node.js, Puppeteer, Redis, RabbitMQ and MongoDB. For distributing the workload, Puppeteer Cluster was used alongside with storing technologies like MongoDB and Redis for caching.
 The project is available at: https://github.com/LucaPetrescu/web-crawler-v3.
 Setting up the project
