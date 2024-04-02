@@ -14,7 +14,9 @@ npm install
 ````
 Before running the app, the application also has a Redis server configured for caching. So first of all, you will need to setup Redis on your machine. Check the Redis docs here. For a better visualization of your Redis database, you can also install RedisInsight, a graphical UI for visualizing all the Redis databases.
 If you are using a Linux machine, open a terminal window and start the Redis server:
+````
 redis-server
+````
 If you are using a Windows machine, then you will need to setup a WSL environment. Once you have it, run the above command.
 In case you want to have a better view of you redis database, install the RedisInsight client.
 The crawler stores the data inside a local MongoDB database. First, you will need to install MongoDB on your local machine. Check the MongoDB documentation here. If you do not want to setup a cluster for MongoDB and want a straighforward setup and usage, then you will need to install MongoDB Compass. The connection is already handle in the code of the applicaition. The only things needed are to create a local database with the name Locations and a colleciton with the name locations.
@@ -22,7 +24,9 @@ The application also uses RabbitMQ as one of the methods for distributing the wo
 
 Before installing RabbitMQ, make sure you have Erlang installed on your computer. You can donwload and install Erlang from here. After installing Erlang, you can download the Windows installer for RabbitMQ here. 
 To start the RabbitMQ server, you will need to navigate to the sbin directory of the RabbitMQ installation folder. From there, you will need to open a terminal and type in the following:
+````
 rabbitmq-plugins enable rabbitmq_management
+````
 	The RabbitMQ server is now available at http://localhost:15672/ with credentials guest:guest.
 	To this point, the project is setted up. Now, to run the crawler, you will need to run the script with node cluster.js by changing the directory to /cluster. However, this will run the crawler with Puppeteer Cluster.
 	To run the project with RabbitMQ, first you will need to switch to /rabbitmq directory and first run the publishUrl.js and then run pm2 start ./rabbitmq/consumeUrl.js -i 10. However, this is not recommended because this variant is not optimized and memory shortages will arise.
