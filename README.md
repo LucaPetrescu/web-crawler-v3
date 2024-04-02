@@ -8,7 +8,10 @@ Setting up the project
 git clone https://github.com/LucaPetrescu/web-crawler-v3.git
 ````
 After that, you will need to install the dependencies:
+
+````
 npm install
+````
 Before running the app, the application also has a Redis server configured for caching. So first of all, you will need to setup Redis on your machine. Check the Redis docs here. For a better visualization of your Redis database, you can also install RedisInsight, a graphical UI for visualizing all the Redis databases.
 If you are using a Linux machine, open a terminal window and start the Redis server:
 redis-server
